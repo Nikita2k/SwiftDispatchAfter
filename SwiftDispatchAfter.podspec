@@ -8,5 +8,6 @@ Pod::Spec.new do |s|
   s.author       = "Nikita Took"
   s.source       = { :git => "https://github.com/Nikita2k/SwiftDispatchAfter.git", :tag => s.version }
   s.source_files = "Classes/*.swift"
-
+  s.ios.deployment_target = '8.0'
+  
 end
