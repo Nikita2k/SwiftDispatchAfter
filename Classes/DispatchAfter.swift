@@ -9,20 +9,20 @@
 
 import Foundation
 
-func delay(aDelay:NSTimeInterval, closure: () -> Void) {
+public func delay(aDelay:NSTimeInterval, closure: () -> Void) {
     
     delay(aDelay, dispatch_get_main_queue(), closure)
     
 }
 
-func delay(aDelay:NSTimeInterval, queue: dispatch_queue_t!, closure: () -> Void) {
+public func delay(aDelay:NSTimeInterval, queue: dispatch_queue_t!, closure: () -> Void) {
     
     let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(aDelay * Double(NSEC_PER_SEC)))
     dispatch_after(delayTime, queue, closure)
     
 }
 
-extension Int {
+public extension Int {
     var second: NSTimeInterval { return NSTimeInterval(self) }
     var seconds: NSTimeInterval { return NSTimeInterval(self) }
     var minute: NSTimeInterval { return NSTimeInterval(self * 60) }
@@ -31,7 +31,7 @@ extension Int {
     var hours: NSTimeInterval { return NSTimeInterval(self * 3600) }
 }
 
-extension Double {
+public extension Double {
     var second: NSTimeInterval { return self }
     var seconds: NSTimeInterval { return self }
     var minute: NSTimeInterval { return self * 60 }
