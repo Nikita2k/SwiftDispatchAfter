@@ -12,6 +12,8 @@ The idea belongs to Matt Neuburg (http://stackoverflow.com/users/341994/matt). A
 4. ???
 5. Profit!
 
+Now you can use swift function instead of dispatch_after.
+
 This will call closure on `main_queue`:
 
 		delay(2.seconds) {
